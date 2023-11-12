@@ -1,22 +1,21 @@
-fn largest<T: std::cmp::PartialOrd>(list: &[T]) -> &T {
-    let mut largest = &list[0];
+struct Point<T> {
+    x: T,
+    y: T,
+}
 
-    for number in list {
-        if number > largest {
-            largest = number;
-        }
+impl<T> Point<T> {
+    fn x(&self) -> &T {
+        &self.x
     }
-
-    largest
+    fn y(&self) -> &T {
+        &self.y
+    }
 }
 
 fn main() {
-    let number_list = vec![34, 50, 25, 100, 65];
-    let result = largest(&number_list);
-    println!("The largest number is result: {}", result);
+    let p = Point { x: 5, y: 10 };
+    // let float = Point { x: 1.0, y: 4.0 };
 
-    let char_list = vec!['y', 'm', 'a', 'q'];
-
-    let result = largest(&char_list);
-    println!("The largest char is {}", result);
+    println!("p.x = {}", p.x());
+    println!("p.y = {}", p.y());
 }
