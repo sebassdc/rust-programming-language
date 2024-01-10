@@ -23,6 +23,5 @@ fn main() {
             hockey team in the NHL.",
         ),
     };
-
-    println!("New article available! {}", article.summarize());
 }
+
