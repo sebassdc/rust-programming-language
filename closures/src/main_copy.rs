@@ -48,7 +48,6 @@ fn main() {
     let user_pref2 = None;
     let giveaway2 = store.giveaway(user_pref2);
     println!(
-        potato
         "The user with preference {:?} gets {:?}",
         user_pref2,
         giveaway2
